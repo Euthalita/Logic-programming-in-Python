@@ -1,0 +1,30 @@
+---------MANIPULANDO O INDICE DA LISTA--------
+
+Eu posso manipular a posição do indice de um valor em uma lista, visto que
+toda posição da lista começa com 0, e se por algum acaso eu precise que a impressão
+comece a partir do indice 1
+
+Entao eu uso a função index
+
+exemlo: Eu preciso imprimir o maior e o menor peso de uma lista começando do 1, visto que eu vou usar 4 pessoa,
+então eu não posso começar do indice 0, pq se a pessoa é a 1ª pesssoa, não da pra ela ta na posição 0
+
+lista = []
+maior = []
+menor = []
+
+for i in range(1, 4):
+    peso = float(input(f'Peso da {i}ª pessoa:'))
+    lista.append(peso)
+    maior = max(lista)
+    menor = min(lista)
+
+print(f' O maior peso {lista.index(maior)}) ---> Tela: O maior peso foi da 0ª pessoa com {maior}Kg')
+
+-----DANDO UM JEITO-----
+Para arrumar a posição eu acrescento +1 junto ao index. Veja:
+lista.index(maior)+1
+print(f'O maior peso foi da {lista.index(maior)+1}ª pessoa com {maior} Kg\nO menor peso foi da {lista.index(menor)+1}ª pessoa com {menor}Kg')
+
+fonte do exercicio: Curso em video python(Guanabara). exercicio: #55
+
