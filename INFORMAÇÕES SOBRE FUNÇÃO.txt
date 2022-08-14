@@ -1,0 +1,23 @@
+exercicio 101- CURSO EM VÍDEO
+def voto(y):
+    x = date.today().year - y
+    if x < 18:
+        return f'Com {x} anos: NÃO VOTA!'
+    elif 60 > x >= 18:
+        return f'Com {x} anos: VOTO OBRIGATÓRIO!'
+    else:
+        return f'Com {x} anos: VOTO OPCIONAL!'
+
+
+idade = int(input('Em que ano você nasceu?'))
+print(voto(idade))
+
+------INFORMAÇÕES SOBRE A FUNÇÃO-------
+
+Dentro do parenteses no nome da função, como por exemplo, voto(), sempre irá o valor
+de uma variavel de fora da função. Eu posso colocar um nome diferente para usar essa variável
+dentro da função, ou pode ser um nome igual também.
+Por exemplo:    def voto(idade)
+			x = date.today().year - idade
+
+Posso criar outras váriaveis dentro da função.

@@ -1,0 +1,26 @@
+------- ORDENAR VALORES NO DICIONARIO -------
+EXERCICIO 91 -Curso em vídeo
+
+from random import randint
+from time import sleep
+ranking = dict()
+
+valor = {'jogador1': randint(1, 6), 'jogador2': randint(1, 6), 'jogador3': randint(1, 6), 'jogador4': randint(1, 6)}
+print('Valores sorteados:')
+for i, j in valor.items():
+    sleep(1)
+    print(f'{i} tirou {j} no dado')
+
+print()
+print('      --- RANKING DOS JOGADORES---')
+
+for i in range(1):
+    for a in sorted(valor, key=valor.get, reverse=True):
+        sleep(1)
+        i += 1
+        print(f'{i}º lugar: {a} com {valor[a]}')
+
+
+
+
+

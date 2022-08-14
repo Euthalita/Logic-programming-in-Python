@@ -1,0 +1,15 @@
+------EXERCÍCIO 102-curso em vídeo-----
+
+def fatorial(num, show=False):
+    f = 1
+    for c in range(num, 0, -1):
+        f *= c
+        if show == True:
+            if c == 1:
+                print('1=', end='')
+                break
+            print(f'{c}x', end='')
+    return f
+
+
+print(fatorial(5, True))

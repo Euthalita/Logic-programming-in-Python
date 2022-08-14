@@ -1,0 +1,27 @@
+soma = 0
+-------MATRIZ-----------
+EX:87 CURSO EM VÍDEO
+
+soma3 = 0
+maior = 0
+matriz = [[], [], []]
+for i in range(3):
+    for j in range(3):
+        valor = int(input(f'Digite um número um valor na posição [{i},{j}]: '))
+        matriz[i].append(valor)
+        if valor%2 == 0:
+            soma += valor
+    soma3 += matriz[i][2]
+
+print(matriz)
+print('-='*30)
+for i in range(3):
+    print()
+    for j in range(3):
+        print(f'[{matriz[i][j]:^5}]',end='')
+print()
+print('-='*30)
+
+print(f'A soma dos valores pares é {soma}')
+print(f'A soma dos valores da 3ª coluna é {soma3}')
+print(f'O maior valor da segunda linha é {max(matriz[1])}')

@@ -1,0 +1,19 @@
+		EXERCICIO 80 #CURSO EM VIDEO
+lista = []
+
+for i in range(5):
+    num = int(input('Digite um valor:'))
+    if num not in lista:
+        lista.append(num)
+        lista.sort()
+        print(f'Adicionado na posição {lista.index(num)}')
+        if num == max(lista):
+            print('Adicionado ao final da lista')
+
+    else:
+        print(f'Esse número já foi digitado, agora ele está na posição {lista.index(num)}')
+        if num == max(lista):
+            print(f'ou seja, ultima posição')
+
+
+print(f'Os valores digitados em ordem foram {lista}')

@@ -1,0 +1,53 @@
+			Exercício Python 078:
+Faça um programa que leia 5 valores numéricos e guarde-os em uma lista. 
+No final, mostre qual foi o maior e o menor valor digitado e as suas respectivas posições na lista. 
+		****ARRUMAR DEPOIS****
+num = 0
+lista = []
+maior = []
+menor = []
+
+for valor in range(5):
+    num = int(input(f'Digite um valor para a posição {valor}: '))
+    lista.append(num)
+print(f'Você digitou os valores {lista} ')
+print(f'O maior valor(es) foi {max(lista)} na posição',end=" ")
+
+for posicao, valor in enumerate(lista):
+    if valor == max(lista):
+        maior = posicao
+        print(f'{maior}ª e', end=" ")
+    if valor == min(lista):
+        menor = posicao
+        print(f'{menor} e)
+
+print(f'O menor valor foi {min(lista)} na posiçao {menor}ª')
+
+			
+				****TENTAR DE OUTRA FORMA.. EXEMPLO DO STACK****
+
+Como você faria manualmente? Ou seja, você compararia a lista item a item. Se o item de mesmo índice da primeira lista 
+for igual ao da segunda você notifica que são iguais, senão você verifica se ele existe na outra lista ou,
+em caso contrário, o valor não existe na outra lista.
+
+Uma solução simples de implementar seria usando a função zip() para combinar os elementos da lista, assim...
+
+lista_1 = ['5','5','1','4']
+lista_2 = ['5','5','0','1']
+
+for index,data in enumerate(zip(lista_1,lista_2)):
+    i, j = data
+    print(f"Índice {index}: ", end="")
+    if i == j:
+        print("Valores são iguais.")
+    elif j in lista_1:
+        print("Valores iguais mas em índice diferente.")
+    else:
+        print("Valores diferentes.")
+E o resultado:
+
+Índice 0: Valores são iguais.
+Índice 1: Valores são iguais.
+Índice 2: Valores diferentes.
+Índice 3: Valores iguais mas em índice diferente.
+O uso da função enumerate() é para gerar o número sequencial para os índices.

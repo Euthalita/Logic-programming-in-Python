@@ -1,0 +1,39 @@
+def cont (i, f, p):
+    lista = []
+    print(f'Contagem de {i} até {f} de {p} em {p}')
+    if p < 0:
+        for a in range(i, f, -p):
+            lista.append(a)
+    if f < 0 or f < i:
+        for a in range(i, f, -p):
+            lista.append(a)
+
+    else:
+        for a in range(i, f, p):
+            lista.append(a)
+    for a in lista:
+        print(f'{a} ', end="")
+    print()
+
+cont(1, 10, 1)
+cont(10, 0, 2)
+
+inicio = int(input('Inicio:'))
+fim = int(input('Fim: '))
+passo = int(input('Passo:'))
+if passo == 0:
+    passo = 1
+
+cont(inicio, fim, passo)
+
+
+
+
+
+
+
+
+
+
+
+
